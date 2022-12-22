@@ -1,0 +1,39 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+<br>
+<h1>Search Results</h1>
+<br>
+<ul>
+  {% for object in object_list %}
+    <li>
+      {{ object.name }}
+      <ul>  
+    <li>
+        Tag {{ object.tags }} 
+      </li>
+      <li>
+          Magnitude 
+        {{ object.magnitude }} <i>kg</i>
+      </li>
+      <li>
+          Diameter 
+        {{ object.diameter }} <i> m</i>
+      </li>
+
+      <li>
+          Perihelion
+        {{ object.perihelion }}<i>km</i>
+      </li>
+
+      <li>
+          Description: 
+        <i> {{ object.description }}</i>
+      </li>
+    </ul> </li>
+
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% load static %}
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Saturnn.ico' %}">
+   <title>Sistemul solar</title>
+
+   <div class="sticky"><a href="{% url 'redirect' %}"><img src="{% static 'images/sun.png' %}" alt="sun" width="95" height="95" align="left" ></a></div>
+   <div class="sticky">
+   <a href="{% url 'redirect' %}"><img src="{% static 'images/mooon.png' %}"alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+   </div>
+   
+   
+
+<div class="header">
+
+<div id="titlu"> Sistemul Solar</div>
+
+
+<div class="dropdown">
+  <button class="dropbtn">Theory and Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'plannets' %}">Planete &#x2646;</a>
+<a href="{% url 'corps' %}">Corpuri cerești &#x2604;</a> 
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'lumin' %}">Luminozitatea stelară</a>
+<a href="{% url 'viteze' %}">Gravitație și viteze cosmice</a>
+<a href="{% url 'varsta' %}">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Contribute</button>
+   <div class="dropdown-content">
+<a  href="{% url 'login' %}">Contribute to IAWN</a>
+
+</div>
+</div>
+</div>
+
+<div id="main" name="principal">
+<div id="mesaj">
+<br><br><br>
+<h1 style="margin-left:10px"> Aplicație 1. <i> Luminozitatea stelara</i> </h1>
+<br><br>
+
+
+ Strălucirea unei stele este strălucirea observată de ochiul uman de la depărtare,
+ în domeniul spectral la care este sensibil, cu toate că stelele emit energie pe întreg spectrul.
+ 
+
+Există un număr imens de stele şi galaxii pe cerul nopţii şi în general acestea sunt alimentate
+într-o măsură mai mare sau mai mică de acelaşi proces ca şi Soarele.<br><br>
+ 
+ <img src="{% static 'images/lumin.jpg' %}"  width="400" height="350" align="center"></a>
+<br><br>
+Stelele se diferenţiază în funcţie de multe caracteristici cum ar fi masa, dimensiunea şi printre
+cele mai importante luminozitatea L. Luminozitatea se măsoară în watts (W) sau sub formă de multiplu a luminozităţii solare L○. 
+<br><br>
+
+Luminozitatea unei stele este data de formula : <b> L=2&#960;R<sup>2</sup>&#963;T<sup>4</sup><br>
+<p>unde:</p>
+<p>L = luminozitatea stelei (W)<br>
+<p>R = raza stelei (m)<br>
+<p>&#963; = constanta Stefan-Boltzmann (5,67*10<sup>-8</sup> J/s<sup>-1</sup>m<sup>-2</sup>K<sup>-4</sup>)</p><br>
+<div id="divv" ><p style="text-align:center;" > Luminozitatea solara = 3,86 x 10<sup>26</sup> W;</p></div><br>
+<br>
+<br>
+<h1> Calculator luminozitate in functie de <i>raza</i> si <i>temperatura</i> stelei: </h1><br>
+<br><br>
+<div id="calculator">
+<form oninput="x.value=parseInt(a.value)*parseInt(a.value)*0.926*0.000000000000000000000000000000001*parseInt(b.value)*parseInt(b.value)*parseInt(b.value)*parseInt(b.value)">
+Raza (m): <input type="number" id="a" value="0">
+Temperatura(K):<input type="number" id="b" value="0"><br><br>
+Luminozitatea stelei: <br><output name="x" for="a b "></output><br> (luminozitati solare)
+<br>
+<br><br>
+</form>
+
+</div>
+<br><br>
+<br><b>
+
+</div>
+</div>
+</body>
+</html>

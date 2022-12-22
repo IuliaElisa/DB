@@ -1,0 +1,254 @@
+{% load static %}
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Saturnn.ico' %}">
+   <title>Sistemul solar</title>
+
+   <div class="sticky"><a href="{% url 'redirect' %}"><img src="{% static 'images/sun.png' %}" alt="sun" width="95" height="95" align="left" ></a></div>
+   <div class="sticky">
+   <a href="{% url 'redirect' %}"><img src="{% static 'images/mooon.png' %}"alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+   </div>
+   
+   
+
+<div class="header">
+
+<div id="titlu"> Sistemul Solar</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Theory and Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'plannets' %}">Planete &#x2646;</a>
+<a href="{% url 'corps' %}">Corpuri cerești &#x2604;</a> 
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'lumin' %}">Luminozitatea stelară</a>
+<a href="{% url 'viteze' %}">Gravitație și viteze cosmice</a>
+<a href="{% url 'varsta' %}">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Contribute</button>
+   <div class="dropdown-content">
+<a  href="{% url 'login' %}">Contribute to IAWN</a>
+
+
+</div>
+</div>
+</div>
+
+<div id="main" name="principal">
+<div id="planete"><h1 align="center">Planetele</h1></div> <br><br>
+
+<!--<img src="planetee.jpg"  style="width:50%; padding:10px; margin-top:10px;" align="right" ><br><br>-->
+<p style=" font-family:monospace; text-align:center;">O planetă este un corp astronomic care orbitează o stea sau o
+ rămășiță stelară, care este suficient de masivă pentru a fi rotunjită de propria
+ sa gravitație, 
+ nu este suficient de masivă pentru a provoca fuziunea termonucleară și și-a curățat regiunea vecină de planetezimale. </p>
+<br><br>
+
+
+
+<div class="dropdown1">
+  <span><b>MERCUR</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/mercur.jpg' %}" style="width:50%; padding:10px;" align="left" >
+        <p>Mercur este planeta cea mai apropiată de Soare, înconjurându-l o dată la fiecare 88 de zile pământene. 
+		Luminozitatea sa variază între -2,0 și 5,5 în magnitudine aparentă, dar nu este ușor de văzut fiindcă cea
+		mai mare separare unghiulară (cea mai mare elongație) față de Soare este de doar 28,3°, însemnând că se poate
+		vedea doar imediat după apusul Soarelui. În perioada 1974 - 1975, Mercur a fost studiată cu ajutorul sondei
+		Mariner 10, care a cartografiat doar 40 - 45 % din suprafața planetei.
+		Începând din 2011, sonda spațială MESSENGER orbitează în jurul planetei pentru a studia compoziția chimică, 
+		geologia și câmpul magnetic. </p>
+         </div>
+   </div>
+</div>
+
+
+
+<div class="dropdown1">
+  <span><b>VENUS</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/venus.jpg' %}" style="width:40%;padding:10px;" align="left" >
+        <p>
+		Venus este a doua planetă ca distanță față de Soare în sistemul nostru solar. 
+		Situată la circa 108 milioane km de Soare, Venus își parcurge orbita în 224,7 
+		de zile.[3] Rotația în jurul propriei sale axe este foarte lentă, durează 243 d
+		e zile și are loc de la vest la est, în sens invers față de rotația celorlalte
+		planete. Cu un diametru de circa 12.100 km, Venus este, ca poziție, a doua plan
+		etă (pornind de la Soare) din sistemul solar, orbita sa fiind cuprinsă între cea a planetelor Mercur și Pământ. Venus este cu
+		foarte puțin mai mică decât Pământul, dar atmosfera sa este foarte diferită: 
+		în principal, aceasta este compusă din 96 % gaz carbonic și 3,5 % azot.</p>
+         </div>
+   </div>
+</div>
+
+
+<div class="dropdown1">
+  <span><b>TERRA</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/terra.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p>
+		Venus este a doua planetă ca distanță față de Soare în sistemul nostru solar. 
+		Situată la circa 108 milioane km de Soare, Venus își parcurge orbita în 224,7 
+		de zile.[3] Rotația în jurul propriei sale axe este foarte lentă, durează 243 d
+		e zile și are loc de la vest la est, în sens invers față de rotația celorlalte
+		planete. Cu un diametru de circa 12.100 km, Venus este, ca poziție, a doua plan
+		etă (pornind de la Soare) din sistemul solar, orbita sa fiind cuprinsă între cea a planetelor Mercur și Pământ. Venus este cu
+		foarte puțin mai mică decât Pământul, dar atmosfera sa este foarte diferită: 
+		în principal, aceasta este compusă din 96 % gaz carbonic și 3,5 % azot.</p>
+         </div>
+   </div>
+</div>
+
+
+
+
+
+<div class="dropdown1">
+  <span><b>MARTE</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/marte.jpg' %}"  style="width:50%; padding:10px;" align="left" >
+        <p>
+		Marte este a patra planetă de la Soare și penultima ca mărime din Sistemul Solar. 
+		Marte poartă numele zeului roman al războiului și este adesea denumită Planeta 
+		Roșie,deoarece oxidul de fier predominant pe suprafața sa îi conferă
+		un aspect roșiatic distinctiv între corpurile astronomice vizibile cu ochiul liber.</p>
+	    <p> Marte este o planetă telurică cu o atmosferă subțire, având c
+		aracteristici de suprafață care amintesc atât de craterele de impact 
+		ale Lunii, cât și de văi, deșerturi și calote glaciare polare ca ale Pământului. </p>
+         </div>
+   </div>
+</div>
+
+
+<div class="dropdown1">
+  <span><b>JUPITER</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/jupiter.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p>
+		Jupiter este a cincea planetă de la Soare și este cea mai mare dintre toate planetele din Sistemul solar.
+		Are diametrul de circa 11 ori mai mare decât cel al Pământului, o masă de circa 318 ori mai mare și un volum de circa 1300 ori mai mare.</p>
+	    <p>Jupiter este al patrulea obiect de pe cer ca strălucire (după Soare, Lună și Venus; și câteodată Marte). 
+         A fost cunoscut din timpuri preistorice. Descoperirea de către Galileo Galilei și Simon Marius, în 1610, 
+         ai celor patru mari sateliți ai lui Jupiter: Io, Europa, 
+          Ganymede și Callisto (cunoscute ca sateliții Galileeni) a fost prima descoperire a unui centru de mișcare aparent necentrat pe Pământ.</p>
+         </div>
+   </div>
+</div>
+
+
+<div class="dropdown1">
+  <span><b>SATURN</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/saturn.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p>  Saturn este a șasea planetă de la Soare și a doua ca mărime din Sistemul Solar, după Jupiter. 
+		     Împreună cu Jupiter, Uranus și Neptun, Saturn este clasificat ca un gigant compus din gaze.  </p> 
+       <p> Planeta este compusă din hidrogen și proporții mici de heliu și alte elemente. Structura internă a 
+          planetei constă într-un miez de piatră și gheață, înconjurat de un strat gros de hidrogen metalic și 
+          un strat gazos exterior. Atmosfera este blândă, deși multe caracteristici intense pot apărea.
+           Vânturile de pe Saturn pot atinge viteze de 1,800 km/h. </p>
+         </div>
+   </div>
+</div>
+
+
+<div class="dropdown1">
+  <span><b>URANUS</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/uranus.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p>  Uranus este a șaptea planetă de la Soare și a treia ca mărime (după diametru).
+		     Uranus este mai mare ca diametru însă mai mică sub aspectul masei decât Neptun. </p> 
+            <p>    Plasat pe o orbită de 19 ori mai îndepărtată de Soare decât cea a Pământului, Uranus, 
+              ca și Neptun, primește foarte puțină căldură, fiind un gigant de gheață. Cu un diametru de circa 52.000 km, Uranus este de aproximativ
+               2 ori mai mic decât Saturn, dar de aproximativ 5 ori mai mare decât Terra (Pământul).
+             Este înconjurat de inele întunecate și are 27 sateliți. </p>
+         </div>
+   </div>
+</div>
+
+
+<div class="dropdown1">
+  <span><b>NEPTUN</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/neptun.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p> Neptun este a opta planeta de la Soare din sistemul solar. Numită după zeul roman al mării, 
+		este a patra planetă după diametru și a treia după masă. Neptun are o masă de 17 ori mai mare 
+		decât cea a Pământului și puțin mai mare decât masa lui Uranus, care este de 15 ori mai greu 
+		decât Pământul, dar nu la fel de dens.</p><p>Neptun orbitează în jurul Soarelui la o distanță de
+		30,1 unități astronomice, ceea ce înseamnă că orbita sa este de aproximativ 30 de ori
+		mai mare decât orbita Pământului. Simbolul astronomic al lui Neptun este ♆, o variantă modificată a tridentului zeului Neptun.</p>
+        <p>Neptun a fost prima planetă găsită prin calcule matematice. Planeta Neptun a fost descoperită
+        din cauza perturbărilor gravitaționale din orbita lui Uranus care l-au condus pe Alexis 
+        Bouvard să presupună existența unei a opta planete. </p>
+         </div>
+   </div>
+</div>
+
+<div class="dropdown1">
+  <span><b>PLUTO ?</b></span>
+   <div class="dropdown-content1">
+       <div id="letter" > 
+	   <img src="{% static 'images/pluto.jpg' %}"  style="width:50%;padding:10px;" align="left" >
+        <p> Pluto este o planetă pitică din Sistemul Solar, a doua ca masă după Eris și, ca volum, cea mai mare planetă pitică.
+		</p>
+<p>Până în 2006 a fost considerată a noua planetă a Sistemului Solar, atât în ordinea 
+distanței față de Soare, cât și a descoperirii. Pluto împreună cu satelitul său,
+ Charon, sunt uneori considerate sistem binar, deoarece baricentrul orbitelor nu 
+ se află în interiorul niciunuia dintre cele două corpuri.</p>
+ <p>Este un corp teluric, aşa cum sunt Mercur, Venus, Pământul şi Marte, dar nu se află în aceeaşi zonă a sistemului solar cu aceste planete,
+ vecinii săi fiind giganticele planete gazoase Jupiter, Saturn, Uranus şi Neptun. Din acest motiv, există unii astronomi
+ care sunt de părere că Pluto s-ar fi format în afara sistemului solar, fiind la un moment dat capturată de gravitaţia 
+ Soarelui. </p>
+         </div>
+   </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</table>
+</div>
+</body>
+</html>

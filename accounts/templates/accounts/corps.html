@@ -1,0 +1,183 @@
+{% load static %}
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Saturnn.ico' %}">
+   <title>Sistemul solar</title>
+   
+   <div class="sticky"><a href="{% url 'redirect' %}"><img src="{% static 'images/sun.png' %}" alt="sun" width="95" height="95" align="left" ></a></div>
+   <div class="sticky">
+   <a href="{% url 'redirect' %}"><img src="{% static 'images/mooon.png' %}"alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+   </div>
+   
+   
+<div class="header">
+
+<div id="titlu"> Sistemul Solar</div>
+
+
+<div class="dropdown">
+  <button class="dropbtn">Theory and Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'plannets' %}">Planete &#x2646;</a>
+<a href="{% url 'corps' %}">Corpuri cerești &#x2604;</a> 
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'lumin' %}">Luminozitatea stelară</a>
+<a href="{% url 'viteze' %}">Gravitație și viteze cosmice</a>
+<a href="{% url 'varsta' %}">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Contribute</button>
+   <div class="dropdown-content">
+<a  href="{% url 'login' %}">Contribute to IAWN</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div id="main" name="principal">
+<div id="corp"><h1 align="center">Corpuri cerești </h1></div> <br><br>
+
+
+ 
+<div class="container">
+
+ <img src="{% static 'images/cometa.jpg' %}"  style="width:24%; padding:5px; border-radius: 140px;">
+ <div class="overlay">
+    <div class="text">Comete</div>
+  </div>
+</div>
+
+<div class="container">
+
+ <img src="{% static 'images/satelit.png' %}" style="width:25%; padding:5px;" >
+ <div class="overlay">
+    <div class="text">Sateliți artificiali</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <img src="{% static 'images/asta.png' %}"  style="width:25%; padding:5px;" >
+ <div class="overlay">
+    <div class="text">Asteroizi</div>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <img src="{% static 'images/luna.png' %}" style="width:20%; margin-bottom:20px;" >
+ <div class="overlay">
+    <div class="text">Sateliți naturali</div>
+  </div>
+</div>
+
+<br><br><br><br>
+
+<div class="container">
+
+  <img src="{% static 'images/pulsar.jpg' %}"  style="width:25%; padding:5px; border-radius: 140px;" >
+ <div class="overlay">
+    <div class="text">Pulsari</div>
+  </div>
+</div>
+<div class="container">
+
+  <img src="{% static 'images/orion.png' %}"  style="width:25%; padding:5px; margin-top:10px;" >
+ <div class="overlay">
+    <div class="text">Stele</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <img src="{% static 'images/cluster.jpg' %}" style="width:20%;border-radius: 140px;">
+ <div class="overlay">
+    <div class="text">Roiuri de stele</div>
+  </div>
+</div>
+<div class="container">
+
+    <img src="{% static 'images/neb.png' %}" style="width:20%; margin-bottom:60px; margin-left:20px; border-radius:140px;">	
+ <div class="overlay">
+    <div class="text">Nebuloase</div>
+  </div>
+</div>
+
+<br><br><br><br>
+<div class="container">
+
+    <img src="{% static 'images/black.jpg' %}" style="width:25%; padding:5px; border-radius: 140px; margin-top:10px;"  >
+ <div class="overlay">
+    <div class="text"> Găuri negre</div>
+  </div>
+</div>
+
+<div class="container">
+
+    <img src="{% static 'images/galaxie.jpg' %}"  style="width:25%; margin-bottom:30px; border-radius:140px;">	
+ <div class="overlay">
+    <div class="text">Galaxii</div>
+  </div>
+</div>
+<div class="container">
+
+    <img src="{% static 'images/exo.png' %}"  style="width:25%; margin-bottom:60px; ">	
+ <div class="overlay">
+    <div class="text">Exoplanete</div>
+  </div>
+</div>
+<div class="container">
+
+    <img src="{% static 'images/rad.png' %}" style="width:20%; margin-bottom:60px; ">	
+ <div class="overlay">
+    <div class="text"><h5 style="font-family:Calibri;">Radiația cosmică de fond</h5></div>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+
+</div>
+</body>
+</html>

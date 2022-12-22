@@ -1,0 +1,103 @@
+{% load static %}
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Saturnn.ico' %}">
+   <title>Sistemul solar</title>
+
+   <div class="sticky"><a href="{% url 'redirect' %}"><img src="{% static 'images/sun.png' %}" alt="sun" width="95" height="95" align="left" ></a></div>
+   <div class="sticky">
+   <a href="{% url 'redirect' %}"><img src="{% static 'images/mooon.png' %}"alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+   </div>
+   
+   
+<div class="header">
+
+<div id="titlu"> Sistemul Solar</div>
+
+
+
+<div class="dropdown">
+  <button class="dropbtn">Theory and Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'plannets' %}">Planete &#x2646;</a>
+<a href="{% url 'corps' %}">Corpuri cerești &#x2604;</a> 
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'lumin' %}">Luminozitatea stelară</a>
+<a href="{% url 'viteze' %}">Gravitație și viteze cosmice</a>
+<a href="{% url 'varsta' %}">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Contribute</button>
+   <div class="dropdown-content">
+<a  href="{% url 'login' %}">Contribute to IAWN</a>
+
+</div>
+</div>
+</div>
+
+<div id="main" name="principal">
+<div id="mesaj">
+
+<h1 align="center"> Aplicație 3. <i> Vârsta unei stele</i> </h1>
+<br><br>
+<h3 style="font-family:Calibri; padding:50px; background:black; color:coral; "><i> "O stea rece se roteşte foarte rapid atunci când este tânără, însă această rotaţie 
+devine din ce în ce mai lentă pe măsură ce steaua îmbătrâneşte"</i></h3><br>
+
+
+<h2> Calcularea vârstei unei stele în funcție de masa pe care o are: </h2><br>
+<h3> Formula: </h3>
+<h2><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+$$t= \frac{c^{2}}{K}*M^{-3} $$ </h2>
+<br>
+
+
+<p style="text-align:left"> t- timpul</p>
+<p style="text-align:left"> c- viteza luminii</p>
+<p style="text-align:left"> M- masa stelei</p>
+<p style="text-align:left"> K- constanta gravitațională </p>
+<br><br>
+<form oninput="x.value=parseInt(a.value)*0.004262">
+Masa : <input type="number" id="a" value="0"><br><br>
+Vârsta stelei =<output name="x" ></output> (ani) 
+</form>
+
+<br><br><br><br><br><br><br>
+</div>
+</div>
+</body>
+</html>

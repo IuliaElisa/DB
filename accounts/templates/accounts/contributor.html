@@ -1,0 +1,63 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+	<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Name: {{contributor.name}}</h5>
+			<hr>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Contact Information</h5>
+			<hr>
+			<p>Email: {{contributor.email}}</p>
+			<p>Phone: {{contributor.phone}}</p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Total Contributions</h5>
+			<hr>
+		</div>
+	</div>
+</div>
+
+
+<br>
+
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Object</th>
+					<th>Diameter</th>
+					<th>Magnitude</th>
+				</tr>
+
+				{% for object in objects %}
+
+				<tr>
+					<td>{{object.name}}</td>
+					<td>{{object.diameter}}</td>
+                    <td>{{object.magnitude}}</td>
+
+				</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

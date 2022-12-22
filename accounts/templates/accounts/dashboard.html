@@ -1,0 +1,82 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+{%  include 'accounts/status.html' %}
+
+<br>
+
+<h4> Search for Asteroids: </h4>
+<form action="{% url 'search_results' %}" method="get">
+	<input name="q" type="text" placeholder="Search..."> <button class="btn btn-outline-secondary" type="submit">Go</button>
+  </form>
+  <br>
+  
+  {% for article in articles %}
+	<h2>{{article.name}}</h2>
+    {{article.content.html|safe}}
+  	{% endfor %}
+  <br>
+<div class="row">
+	<div class="col-md-5">
+		<h5>CONTRIBUTORS:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href=" {% url 'add_contributor' %}">Create Contributor</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Contact</th>
+				</tr>
+
+				{% for contributor in contributors %}
+					<tr>
+						<td>{{contributor.name}}</td>
+						<td>{{contributor.phone}}</td>
+						<td>{{contributor.email}}</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>LAST Contributions</h5>
+		<hr><a class="btn btn-primary  btn-sm btn-block" href=" {% url 'add_object' %}">Add Object</a>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Author</th>
+					<th>Object</th>
+					<th>Diameter</th>
+					<th>Magnitude</th>
+					<th>Mass</th>
+					<th>Category</th>
+					<th>Tags</th>
+				</tr>
+
+				{% for object in objects %}
+					<tr>
+						<td>{{object.contributor}}</td>
+						<td>{{object.name}}</td>
+						<td>{{object.diameter}}</td>
+						<td>{{object.magnitude}}</td>
+						<td>{{object.mass}}</td>
+						<td>{{object.category}}</td>
+						<td>{{object.tags}}</td>
+
+					</tr>
+				{% endfor %}
+
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+

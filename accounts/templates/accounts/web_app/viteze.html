@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<script>
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="Saturnn.ico">
+   <title>Sistemul solar</title>
+
+<div class="sticky"><a href="jolie-home.html"><img src="sun.png" alt="sun" width="95" height="95" align="left" ></a></div>
+<div class="sticky">
+<a href="jolie-home.html"><img src="mooon.png" alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+</div>
+
+<div class="header">
+
+<div id="titlu"> Sistemul Solar</div>
+
+
+<div class="dropdown">
+  <button class="dropbtn">Teorie</button>
+  <div class="dropdown-content">
+<a href="istorie.html"> Scurtă istorie a timpului &#x23F2;</a>
+<a href="Soare.html">Soarele &#x2600;</a>
+<a href="planete.html">Planete &#x2646;</a>
+<a href="corps.html">Corpuri cerești &#x2604;</a> 
+<a href="lansare.html">3,2,1.... lansare! &#x1F680; </a> 
+<a href="pamant.html">Planeta noastră stranie  &#x2641;</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Aplicații</button>
+   <div class="dropdown-content">
+<a href="lumin.html">Luminozitatea stelară</a>
+<a href="viteze.html">Gravitație și viteze cosmice</a>
+<a href="varsta.html">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Sugestii | Reclamații</button>
+   <div class="dropdown-content">
+<a href="contact.php">Contactează autorul</a>
+
+</div>
+</div>
+</div>
+
+<div id="main" name="principal">
+<div id="mesaj">
+<br><br><br>
+<h1 style="margin-left:10px"> Aplicație 2. <i> Gravitație și viteze cosmice</i> </h1>
+<br><br>
+<h2 style="font-family:monospace; background-color:orange; width:400px;">Ce orbită poate avea un corp la lansare?</h2><br>
+<h3 style=" font-family:Candara; text-align:left; "> Un aparat lansat în câmpul gravitațional al Pământului se numește <u>satelit artificial</u> dacă 
+orbita sa este închisă (<b>circulară</b> sau <b>eliptică</b>)
+ și respectiv <u>rachetă cosmică</u>
+sau <u>navă spațială</u> - dacă traiectoria sa este deschisă (<b>parabolică</b> sau <b>hiperbolică</b>).</h3><br>
+
+ <h2 style="font-family:monospace;background-color:orange; width:400px;">Ce anume determină forma orbitei?</h2><br>
+ 
+<h3 style=" font-family:Candara; text-align:left; "> 
+Forma orbitei unui satelit depinde de <b>viteza inițială</b> la începutul porțiunii pasive a traiectoriei sale.
+</h3>
+<br><br>
+<h1 style="font-fammily:monospace;background-color:orange;"> Prima viteză cosmică (orbita circulară) </h1>
+<br>
+<h3 style=" font-family:Candara;"> Un satelit imaginar s-ar mișca pe o orbită <b> circulară</b> aproape de suprafata Pamantului
+ (h=0) daca i s-ar imprima viteza :</h3>
+<br>
+<h2>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+$$v_{1c}= \sqrt{\frac{G*(M+m)}{(R+h)}}\approx \sqrt{\frac{G*M}{(R+h)}} $$ = 7.91 km/s
+</h2>
+<br>
+
+
+
+<h1 style="font-fammily:monospace;background-color:orange;"> A doua viteză cosmică (orbita parabolică) </h1>
+<br>
+
+<h3 style="font-family:Candara;"> Un aparat cosmic învinge atracția Pământului și își continuă zborul în spațiul cosmic, 
+atunci când i se imprimă la lansarea pe orbită o viteză mai mare sau 
+egală cu viteza parabolică față de Pământ :</h3>
+<h2>
+$$ v_{2p}=\sqrt{2}*v_{1c}  $$= 11.2 km/s
+</h2>
+<br>
+</div>
+<br><br>
+<br><b>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% load static %}
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Saturnn.ico' %}">
+   <title>Sistemul solar</title>
+
+
+<div class="sticky"><a href="{% url 'redirect' %}"><img src="{% static 'images/sun.png' %}" alt="sun" width="95" height="95" align="left" ></a></div>
+<div class="sticky">
+<a href="{% url 'redirect' %}"><img src="{% static 'images/mooon.png' %}"alt="moon" width="120" height="90"  align="right" style="padding-left:50px;" ></a>
+</div>
+
+
+<div class="header">
+
+<div id="titlu"> Sistemul    Solar</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Theory and Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'plannets' %}">Planete &#x2646;</a>
+<a href="{% url 'corps' %}">Corpuri cerești &#x2604;</a> 
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Applications</button>
+  <div class="dropdown-content">
+<a href="{% url 'lumin' %}">Luminozitatea stelară</a>
+<a href="{% url 'viteze' %}">Gravitație și viteze cosmice</a>
+<a href="{% url 'varsta' %}">Calcularea vârstei unei stele</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+   <button class="dropbtn">Contact | Contribute</button>
+   <div class="dropdown-content">
+<a  href="{% url 'login' %}">Contribute to IAWN</a>
+
+</div>
+</div>
+</div>
+<div id="main" name="principal">
+
+
+<!--<img src="mooon.png" alt="moon" width="70" height="50"  align="right">-->
+
+<div id="mesaj" >
+<h1> <img src="{% static 'images/lumin.jpg' %}" alt="2" width="600" height="600"  align="center"></h1>
+</div>
+</div>
+</body>
+</html>
